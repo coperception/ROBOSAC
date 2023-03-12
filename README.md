@@ -86,7 +86,7 @@ python robosac.py [-d DATA] [--log] [--logpath LOGPATH] [--visualization]
                          [--partial_upperbound]
 ```
 
-**NOTE: Due to some data syncing issues, ROBOSAC cannot be performed under multi-GPU environment. **
+**NOTE: Due to some data syncing issues, ROBOSAC cannot be performed under multi-GPU environment.** 
 
 **You may need to specify CUDA_VISIBLE_DEVICES in front of python commands if you are using multiple GPUs:**
 
@@ -100,71 +100,71 @@ CUDA_VISIBLE_DEVICES=0 python robosac.py [your params]
 
 ```python
 -d DATA, --data DATA  
-			The path to the preprocessed sparse BEV training data, test set.
-			(default: *Specify your dataset location here*)
+	The path to the preprocessed sparse BEV training data, test set.
+	(default: *Specify your dataset location here*)
 
 # Adversarial perturbation
 --adv_method ADV_METHOD
-      pgd/bim/cw-l2 
-      (default: pgd)
+	pgd/bim/cw-l2 
+	(default: pgd)
 
 --eps EPS             	
-			epsilon of adv attack. 
-			(default: 0.5)
+	epsilon of adv attack. 
+	(default: 0.5)
 
 --adv_iter ADV_ITER   
-			adv iterations of computing perturbation 
-			(default: 15)
+	adv iterations of computing perturbation 
+	(default: 15)
 
     
 # Scene and frame settings    
 --scene_id SCENE_ID   
-			target evaluation scene 
-			(default: [8]) 
+	target evaluation scene 
+	(default: [8]) 
     	#Scene 8, 96, 97 has 6 agents. This param could not be specify in commandline, you shall change its default value, e.g. [96]
 
 --sample_id SAMPLE_ID
-      target evaluation sample 
-      (default: None)
+	target evaluation sample 
+	(default: None)
 
     
 # ROBOSAC modes and parameters
 --amongus ROBOSAC    
-			upperbound/lowerbound/no_defense/robosac_validation/robosac_mAP/
-  		adaptive/fix_attackers/performance_eval/probing 
+	upperbound/lowerbound/no_defense/robosac_validation/robosac_mAP/
+  	adaptive/fix_attackers/performance_eval/probing 
     	(default: )
 
 --ego_agent EGO_AGENT
-			id of ego agent (default: 1)(agent 0 is RSU/Road Side Unit)
+	id of ego agent (default: 1)(agent 0 is RSU/Road Side Unit)
 
 --robosac_k ROBOSAC_K   
-			specify consensus set size if needed (default: None)
+	specify consensus set size if needed (default: None)
 
 --ego_loss_only       
-			only use ego loss to compute adv perturbation(default: False)
+	only use ego loss to compute adv perturbation(default: False)
 
 --step_budget STEP_BUDGET
-			sampling budget in a single frame (default: 3)
+	sampling budget in a single frame (default: 3)
 
 --box_matching_thresh BOX_MATCHING_THRESH
-      IoU threshold for validating two detection results
-      (default: 0.3)
+	IoU threshold for validating two detection results
+	(default: 0.3)
 
 --number_of_attackers NUMBER_OF_ATTACKERS
-      number of malicious attackers in the scene 
-      (default:1)
+	number of malicious attackers in the scene 
+	(default:1)
 
 --fix_attackers       
-			if true, attackers will not change in different frames
-			(default: False)
+	if true, attackers will not change in different frames
+	(default: False)
 
 --use_history_frame   
-			use history frame for computing the consensus, reduce 1 step of forward prop. 
-			(default: False)
+	use history frame for computing the consensus, reduce 1 step of forward prop. 
+	(default: False)
 
 --partial_upperbound  
-			use with specifying robosac_k, to perform clean collaboration with a subset of teammates 
-			(default: False)
+	use with specifying robosac_k, to perform clean collaboration with a subset of teammates 
+	(default: False)
 ```
 
 
@@ -187,9 +187,9 @@ test
 ├──agent_3
 ├──agent_4
 ├──agent_5
-		├──19_0
-				├──0.npy		
-		...
+      ├──19_0
+	  ├──0.npy		
+	  ...
 ```
 
 
