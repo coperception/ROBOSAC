@@ -198,7 +198,7 @@ test
 
 Link the checkpoint location in the default value of argument "**resume**"
 
-Pre-trained checkpoint is saved in `AmongUs/coperception/ckpt/meanfusion` folder.
+Please download [pre-trained weights](https://drive.google.com/drive/folders/1dGEYIzc5ITFKR0TSZfXPYAIw2GBo4oBT?usp=share_link) and save them in `AmongUs/coperception/ckpt/meanfusion` folder.
 
 `epoch_49.pth` is the original victim model without adversarial training.
 
