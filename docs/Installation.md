@@ -44,7 +44,7 @@ See the [documentation of installing V2X-Sim](https://coperception.readthedocs.i
 Link the test split of V2X-Sim dataset in the default value of argument "**data**"
 
 ```bash
-/{Your_localtion}/V2X-Sim/sweeps/test
+/{Your_location}/V2X-Sim/sweeps/test
 ```
 
 in the `test` folder data are structured like:
