@@ -21,7 +21,7 @@ In such a framework, more teammates in the sampled subset often entail better pe
 ## Getting Started
 - [Installation](docs/Installation.md/#installation)
 - [Dataset Preparation](docs/Installation.md/#dataset-preparation)
-- [Specifying dataset and checkpoint](docs/Installation.md/#specifying-dataset)
+- [Specifying Dataset and Model Checkpoint](docs/Installation.md/#specifying-dataset)
 
 
 
