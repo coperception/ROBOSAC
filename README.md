@@ -18,47 +18,10 @@ In such a framework, more teammates in the sampled subset often entail better pe
 
 
 
-## Installation
-
-### Requirements
-
-* Linux (tested on Ubuntu 18.04)
-* Python 3.7
-* Anaconda
-* PyTorch
-* CUDA 11.7
-
-### Create Anaconda Environment from yml
-
-in the directory of `AmongUs`:
-
-```bash
-cd coperception
-conda env create -f environment.yml
-conda activate coperception
-```
-
-### CUDA
-
-```bash
-conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
-```
-
-### Install CoPerception Library
-
-This installs and links `coperception` library to code in `./coperception` directory.
-
-```bash
-pip install -e .
-```
-
-
-
-## Dataset Preparation
-
-Please download the official [V2X-Sim Dataset](https://ai4ce.github.io/V2X-Sim/download.html)**(<u>V2.0</u>)**
-
-See [Documentation of installing V2X-Sim](https://coperception.readthedocs.io/en/latest/datasets/v2x_sim/) for dataset pre-processing details.
+## Getting Started
+- [Installation](docs/Installation.md/#installation)
+- [Dataset Preparation](docs/Installation.md/#dataset-preparation)
+- [Specifying dataset and checkpoint](docs/Installation.md/#specifying-dataset)
 
 
 
@@ -167,102 +130,10 @@ CUDA_VISIBLE_DEVICES=0 python robosac.py [your params]
 	(default: False)
 ```
 
-
-
-### Specifying Dataset
-
-Link the test split of V2X-Sim dataset in the default value of argument "**data**"
-
-```bash
-/{Your_localtion}/V2X-Sim/sweeps/test
-```
-
-in the `test` folder data are structured like:
-
-```
-test
-├──agent_0
-├──agent_1
-├──agent_2
-├──agent_3
-├──agent_4
-├──agent_5
-      ├──19_0
-	  ├──0.npy		
-	  ...
-```
-
-
-
-### Specifying Victim Detection Model Checkpoint
-
-Link the checkpoint location in the default value of argument "**resume**"
-
-Please download [pre-trained weights](https://drive.google.com/drive/folders/1dGEYIzc5ITFKR0TSZfXPYAIw2GBo4oBT?usp=share_link) and save them in `AmongUs/coperception/ckpt/meanfusion` folder.
-
-`epoch_49.pth` is the original victim model without adversarial training.
-
-`epoch_advtrain_49.pth` is the PGD-trained model.
-
-
-
-### Validation of ROBOSAC Algorithm (Success Rate)
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python robosac.py --log --robosac robosac_validation  --adv_iter 15 --number_of_attackers {desired_number_of_attackers}  --robosac_k {desired_number_of_teammates}
-```
-
-
-
-### Evaluation of Detection Performance (mAP)
-
-#### Upperbound++ (Collaborate with all teammates in the clean environment)
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python robosac.py --log --robosac upperbound
-```
-
-#### Upperbound (Collaborate with a subset of teammates in the clean environment)
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python robosac.py --log --robosac upperbound --robosac_k {desired_number_of_teammates} --partial_upperbound
-```
-
-#### Lowerbound (Ego-only predictions)
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python robosac.py --log --robosac lowerbound
-```
-
-#### No Defense (Collaborate with attackers without robosac or adversarial training)
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python robosac.py --log --robosac no_defense --adv_iter 15 --number_of_attackers {desired_number_of_attackers} --ego_agent {desired_idx_of_ego_agent}
-```
-
-#### ROBOSAC
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python robosac.py --log --robosac robosac_mAP  --adv_iter 15 --number_of_attackers {desired_number_of_attackers} --step_budget {desired_step_budget}
-```
-
-### Attacker Ratio Estimation (Aggressive-to-conservative Probing, A2CP)
-
-```bash
-CUDA_VISIBLE_DEVICES=0 python robosac.py --robosac probing --adv_iter 15 --number_of_attackers {desired_number_of_attackers} --step_budget {desired_step_budget, in paper: 5}
-```
-
-
-
-
-
-if `--log` specified, logs will be save in the directory of detection model checkpoint.
-
-In default:
-
-```bash
-AmongUs/coperception/ckpt/log_epoch{}_scene{}_ego{}_{}attackers_{ROBOSAC_MODE}_{TIME_STR}.txt
-```
+## Experiment
+- [Validation of ROBOSAC Algorithm (Success Rate)](docs/Experiment.md/#validation-of-robosac-algorithm-success-rate)
+- [valuation of Detection Performance (mAP)](docs/Experiment.md/#evaluation-of-detection-performance-map)
+- [Attacker Ratio Estimation (Aggressive-to-conservative Probing, A2CP)](docs/Experiment.md/#attacker-ratio-estimation-aggressive-to-conservative-probing-a2cp)
 
 
 
