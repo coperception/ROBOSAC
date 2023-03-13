@@ -132,7 +132,7 @@ CUDA_VISIBLE_DEVICES=0 python robosac.py [your params]
 
 ## Experiment
 - [Validation of ROBOSAC Algorithm (Success Rate)](docs/Experiment.md/#validation-of-robosac-algorithm-success-rate)
-- [valuation of Detection Performance (mAP)](docs/Experiment.md/#evaluation-of-detection-performance-map)
+- [Evaluation of Detection Performance (mAP)](docs/Experiment.md/#evaluation-of-detection-performance-map)
 - [Attacker Ratio Estimation (Aggressive-to-conservative Probing, A2CP)](docs/Experiment.md/#attacker-ratio-estimation-aggressive-to-conservative-probing-a2cp)
 
 
