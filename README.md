@@ -2,7 +2,7 @@
 
 [Yiming Li*](https://scholar.google.com/citations?user=i_aajNoAAAAJ), [Qi Fang*](https://scholar.google.com/citations?user=LIuiQlkAAAAJ), [Jiamu Bai](https://github.com/jiamubai), [Siheng Chen](https://scholar.google.com/citations?user=W_Q33RMAAAAJ), [Felix Juefei-Xu](https://scholar.google.com/citations?user=dgN8vtwAAAAJ), [Chen Feng](https://scholar.google.com/citations?user=YeG8ZM0AAAAJ)
 
-**"Simple yet effective sampling mechanisim against malicious attackers in multi-agent collaborative perception settings"**
+**"Simple yet effective sampling mechanism against malicious attackers in multi-agent collaborative perception settings"**
 
 <p align="center"><img src='figs/teaser.png' align="center" height="350px"> </p>
 
