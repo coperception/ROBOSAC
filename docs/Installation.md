@@ -36,7 +36,7 @@ pip install -e .
 
 Please download the official [V2X-Sim Dataset](https://ai4ce.github.io/V2X-Sim/download.html)**(<u>V2.0</u>)**
 
-See [Documentation of installing V2X-Sim](https://coperception.readthedocs.io/en/latest/datasets/v2x_sim/) for dataset pre-processing details.
+See the [Documentation of installing V2X-Sim](https://coperception.readthedocs.io/en/latest/datasets/v2x_sim/) for dataset pre-processing details.
 
 
 ### Specifying Dataset
