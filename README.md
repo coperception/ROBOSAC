@@ -6,7 +6,7 @@
 
 <p align="center"><img src='figs/teaser.png' align="center" height="350px"> </p>
 
-[**ArXiv: Among Us: Adversarially Robust Collaborative Perception by Consensus**]()        
+[**ArXiv: Among Us: Adversarially Robust Collaborative Perception by Consensus**](https://arxiv.org/abs/2303.09495)        
 
 ## Abstract
 
