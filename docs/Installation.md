@@ -10,7 +10,7 @@
 
 ### Create Anaconda Environment from yml
 
-in the directory of `AmongUs`:
+in the directory of `ROBOSAC`:
 
 ```bash
 cd coperception
