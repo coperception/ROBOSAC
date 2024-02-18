@@ -34,17 +34,14 @@ pip install -e .
 
 ### Dataset Preparation
 
-Please download the official [V2X-Sim Dataset](https://ai4ce.github.io/V2X-Sim/download.html)**(<u>V2.0</u>)**
-
-See the [documentation of installing V2X-Sim](https://coperception.readthedocs.io/en/latest/datasets/v2x_sim/) for dataset pre-processing details.
-
+Please download and unzip the [parsed detection dataset](https://drive.google.com/file/d/1ZM_JkugZHmTwkR1gwG8ZuFq0YBwPDcDV/view?usp=drive_link) of V2X-Sim 2.0.
 
 ### Specifying Dataset
 
 Link the test split of V2X-Sim dataset in the default value of argument "**data**"
 
 ```bash
-/{Your_location}/V2X-Sim/sweeps/test
+/{Your_location}/V2X-Sim-det/test
 ```
 
 in the `test` folder data are structured like:
